@@ -67,7 +67,8 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 ## 🚀 3. Hình ảnh các chức năng
 
 <p align="center">
-  <img src="images/anhGiaoDien.jpg" alt="Ảnh 1" width="800"/>
+  <img src="<img width="376" height="287" alt="Chức năng đăng nhập" src="https://github.com/user-attachments/assets/1eacf853-8c1e-43ce-be79-aab4b7c28b9c" />
+" alt="Ảnh 1" width="800"/>
 </p>
 
 <p align="center">
