@@ -89,7 +89,7 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20%C4%91%C4%83ng%20k%C3%BD.png?raw=true" alt="Chức năng đăng ký" width="700"/>
 </p>
 <p align="center">
-  <em> Hình 2: Client chat với Server</em>
+  <em> Hình 2: Chức năng đăng ký </em>
 </p>
 
 
@@ -104,37 +104,30 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
   <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Giao%20di%E1%BB%87n%202%20ng%C6%B0%E1%BB%9Di%20chat%20v%E1%BB%9Bi%20nhau.png?raw=true" alt="Giao diện hai người chat với nhau" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 4: Client Lanh gửi tin nhắn khi Client Hoa offine.</em>
+  <em> Hình 4: Giao diện hai người chat với nhau </em>
 </p>
 
 <p align="center">
   <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/4%20Collection.png?raw=true" alt="Bộ sưu tập 4" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 5: Client Hoa nhận được tin nhắn từ Client Lanh khi online.</em>
+  <em> Hình 5: 4 Collection.</em>
 </p>
 
 <p align="center">
   <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tr%E1%BA%A1ng%20th%C3%A1i.png?raw=true" alt="Bộ sưu tập trạng thái" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 6: Ảnh lịch sử chat được lưu vào file txt </em>
+  <em> Hình 6: Ảnh trạng thái </em>
 </p>
 
 <p align="center">
     <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tin%20nh%E1%BA%AFn.png?raw=true" alt="Bộ sưu tập tin nhắn" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 7: Ảnh Server xóa dữ liệu</em>
+  <em> Hình 7: Ảnh lưu tập tin nhắn</em>
 </p>
 
-
-<p align="center">
-  <img src="images/anhServerngatKetNoiClient.jpg" alt="Ảnh 8" width="400"/>
-</p>
-<p align="center">
-  <em> Hình 8: Ảnh Server ngắt kết nối với CLient</em>
-</p>
 
 ## 📝 4. Hướng dẫn cài đặt và sử dụng
 
