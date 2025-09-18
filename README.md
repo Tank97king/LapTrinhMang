@@ -9,9 +9,9 @@
 </h2>
 <div align="center">
     <p align="center">
-        <img src="images/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
-        <img src="images/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
-        <img src="images/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/aiotlab_logo.png?raw=true" alt="AIoTLab Logo" width="170"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/fitdnu_logo.png?raw=true" alt="FITDNU Logo" width="180"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/dnu_logo.png?raw=true" alt="DaiNam University Logo" width="200"/>
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
