@@ -82,7 +82,7 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 </p>
 
 <p align="center">
-  <em>Hình 1: Ảnh giao diện chat giữa Client-Server  </em>
+  <em>Hình 1: Ảnh Chức năng đăng nhập  </em>
 </p>
 
 <p align="center">
