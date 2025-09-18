@@ -25,6 +25,17 @@
 **Client**: cung cấp giao diện để gửi/nhận tin nhắn.  
 **Lưu trữ dữ liệu**: lịch sử chat được lưu vào file văn bản thay vì cơ sở dữ liệu, giúp triển khai đơn giản.  
 Các chức năng chính:  
+
+- ✅ Kết nối Client-Server qua Socket
+- ✅ Đăng ký/Đăng nhập với password hashing
+- ✅ Chat real-time với Unicode support
+- ✅ Quản lý phòng chat riêng tư
+- ✅ Hiển thị danh sách người dùng online
+- ✅ Lưu trữ lịch sử chat trong MongoDB
+- ✅ Quản lý trạng thái người dùng (online/offline/away)
+- ✅ Auto-reconnect khi mất kết nối
+- ✅ GUI Swing hiện đại và dễ sử dụng
+
 **🖥️ Chức năng của Server**:  
 1. Kết nối & Quản lý Client: Lắng nghe các yêu cầu kết nối, tạo luồng riêng cho từng Client, quản lý danh sách Client đang hoạt động.  
 2. Trung gian phân phối tin nhắn:
