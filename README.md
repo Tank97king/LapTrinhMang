@@ -86,7 +86,7 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 </p>
 
 <p align="center">
-  <img src="images/anhClientChatServer.jpg" alt="Ảnh 2" width="700"/>
+  <img src="[images/anhClientChatServer.jpg](https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20%C4%91%C4%83ng%20k%C3%BD.png?raw=true)" alt="Chức năng đăng ký" width="700"/>
 </p>
 <p align="center">
   <em> Hình 2: Client chat với Server</em>
