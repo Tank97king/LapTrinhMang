@@ -94,35 +94,35 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 
 
 <p align="center">
-  <img src="images/AnhClientChatVoiNhau.jpg" alt="Ảnh 3" width="450"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/H%E1%BB%87%20th%E1%BB%91ng%20th%C3%B4ng%20bao%20tham%20gia%20th%C3%A0nh%20c%C3%B4ng.png?raw=true" alt="Hệ thống thông báo tham gia thành công" width="800"/>
 </p>
 <p align="center">
   <em> Hình 3: Hai Client chat với nhau.</em>
 </p>
 
 <p align="center">
-  <img src="images/AnhClient1guiTNClient2khioff.jpg" alt="Ảnh 4" width="700"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Giao%20di%E1%BB%87n%202%20ng%C6%B0%E1%BB%9Di%20chat%20v%E1%BB%9Bi%20nhau.png?raw=true" alt="Giao diện hai người chat với nhau" width="800"/>
 </p>
 <p align="center">
   <em> Hình 4: Client Lanh gửi tin nhắn khi Client Hoa offine.</em>
 </p>
 
 <p align="center">
-  <img src="images/AnhClient2nhanDcTnKhiOnl.jpg" alt="Ảnh 5" width="400"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/4%20Collection.png?raw=true" alt="Bộ sưu tập 4" width="800"/>
 </p>
 <p align="center">
   <em> Hình 5: Client Hoa nhận được tin nhắn từ Client Lanh khi online.</em>
 </p>
 
 <p align="center">
-  <img src="images/anhLichSuChatLuuTxt.jpg" alt="Ảnh 6 " width="500"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tr%E1%BA%A1ng%20th%C3%A1i.png?raw=true" alt="Bộ sưu tập trạng thái" width="800"/>
 </p>
 <p align="center">
   <em> Hình 6: Ảnh lịch sử chat được lưu vào file txt </em>
 </p>
 
 <p align="center">
-    <img src="images/anhServerxoaDL.jpg" alt="Ảnh 7 " width="400"/>
+    <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tin%20nh%E1%BA%AFn.png?raw=true" alt="Bộ sưu tập tin nhắn" width="800"/>
 </p>
 <p align="center">
   <em> Hình 7: Ảnh Server xóa dữ liệu</em>
