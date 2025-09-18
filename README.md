@@ -78,8 +78,7 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 ## 🚀 3. Hình ảnh các chức năng
 
 <p align="center">
-  <img src="<img width="376" height="287" alt="Chức năng đăng nhập" src="https://github.com/user-attachments/assets/1eacf853-8c1e-43ce-be79-aab4b7c28b9c" />
-" alt="Ảnh 1" width="800"/>
+<img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20%C4%91%C4%83ng%20nh%E1%BA%ADp.png?raw=true" alt="Chức năng đăng nhập" width="800"/>
 </p>
 
 <p align="center">
