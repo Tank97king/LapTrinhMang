@@ -68,6 +68,7 @@ Các công nghệ được sử dụng để xây dựng ứng dụng chat Clien
 **Java Swing**  
 **Java Sockets**  
 **File I/O**  
+**MongoDB**  
 **Hỗ trợ**: 
 
     java.util.Date hoặc java.time.LocalDateTime: Tạo timestamp cho mỗi tin nhắn để ghi vào file và hiển thị trên giao diện, giúp người dùng theo dõi thời gian gửi.
@@ -140,65 +141,149 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 
 ### 🔧 Yêu cầu hệ thống
 
-- **Java Development Kit (JDK)**: Phiên bản 8 trở lên
-- **Hệ điều hành**: Windows, macOS, hoặc Linux
-- **Môi trường phát triển**: IDE (IntelliJ IDEA, Eclipse, VS Code) hoặc terminal/command prompt
-- **Bộ nhớ**: Tối thiểu 512MB RAM
-- **Dung lượng**: Khoảng 10MB cho mã nguồn và file thực thi
+## Yêu cầu hệ thống
 
-### 📦 Cài đặt và triển khai
+- Java 8 trở lên
+- MongoDB 4.0 trở lên
+- Ant (để build project)
 
-#### Bước 1: Chuẩn bị môi trường
-1. **Kiểm tra Java**: Mở terminal/command prompt và chạy:
-   ```bash
-   java -version
-   javac -version
-   ```
-   Đảm bảo cả hai lệnh đều hiển thị phiên bản Java 8 trở lên.
+## Cài đặt và chạy
 
-2. **Tải mã nguồn**: Sao chép thư mục `UngDungChat_TCP` chứa các file:
-   - `Server.java`
-   - `Client.java`
+### 1. Cài đặt MongoDB
 
-#### Bước 2: Biên dịch mã nguồn
-1. **Mở terminal** và điều hướng đến thư mục chứa mã nguồn
-2. **Biên dịch các file Java**:
-   ```bash
-   javac UngDungChat_TCP/*.java
-   ```
-   Hoặc biên dịch từng file riêng lẻ:
-   ```bash
-   javac UngDungChat_TCP/Server.java
-   javac UngDungChat_TCP/Client.java
-   ```
+Tải và cài đặt MongoDB từ: https://www.mongodb.com/try/download/community
 
-3. **Kiểm tra kết quả**: Nếu biên dịch thành công, sẽ tạo ra các file `.class` tương ứng.
-
-#### Bước 3: Chạy ứng dụng
-
-**Khởi động Server:**
+Khởi động MongoDB:
 ```bash
-java UngDungChat_TCP.Server
+mongod
 ```
-- Server sẽ khởi động trên port mặc định (1234)
-- Giao diện server sẽ hiển thị, sẵn sàng nhận kết nối từ client
-- Server sẽ tạo file `chat_history.txt` để lưu lịch sử chat
 
-**Khởi động Client:**
+### 2. Download dependencies
+
 ```bash
-java UngDungChat_TCP.Client
+ant download-deps
 ```
-- Mở terminal mới cho mỗi client
-- Nhập tên người dùng khi được yêu cầu (ví dụ: "Lanh", "Hoa", "Minh")
-- Client sẽ kết nối đến server và hiển thị giao diện chat
 
-### 🚀 Sử dụng ứng dụng
+### 3. Build project
 
-1. **Kết nối**: Client tự động kết nối đến server sau khi nhập tên
-2. **Gửi tin nhắn**: Gõ tin nhắn vào ô nhập và nhấn Enter hoặc nút "Gửi"
-3. **Nhận tin nhắn**: Tin nhắn từ các client khác sẽ hiển thị trong khu vực chat
-4. **Lịch sử chat**: Server tự động lưu tất cả tin nhắn vào file `chat_history.txt`
-5. **Ngắt kết nối**: Đóng cửa sổ client hoặc nhấn Ctrl+C để ngắt kết nối
+```bash
+ant compile
+```
+
+### 4. Chạy Server
+
+```bash
+ant run-server
+```
+
+### 5. Chạy Client
+
+Mở terminal mới và chạy:
+```bash
+ant run-client
+```
+
+Hoặc chạy nhiều client để test:
+```bash
+ant run-client
+ant run-client
+ant run-client
+```
+
+## Cấu trúc project
+
+```
+btl/
+├── src/btl/
+│   ├── Server.java          # Server chính với MongoDB integration
+│   └── Client.java          # Client với Swing GUI
+├── build.xml               # Ant build script
+├── lib/                    # Dependencies (MongoDB driver)
+└── README.md              # Hướng dẫn này
+```
+
+## Sử dụng
+
+### Đăng ký/Đăng nhập
+- Mở client, nhập tên đăng nhập và mật khẩu
+- Chọn "Đăng ký" để tạo tài khoản mới
+- Chọn "Đăng nhập" để đăng nhập với tài khoản có sẵn
+
+### Chat
+- Gõ tin nhắn và nhấn Enter hoặc nút "Gửi"
+- Tin nhắn sẽ được gửi đến tất cả người dùng trong phòng hiện tại
+- Lịch sử chat được tự động load khi vào phòng
+
+### Quản lý phòng
+- Sử dụng dropdown "Phòng" để chuyển phòng
+- Các lệnh chat:
+  - `/join <tên_phòng>` - Chuyển vào phòng
+  - `/create <tên_phòng>` - Tạo phòng mới
+  - `/rooms` - Xem danh sách phòng
+  - `/users` - Xem danh sách người dùng online
+  - `/status <trạng_thái>` - Đổi trạng thái
+
+### Danh sách người dùng
+- Panel bên phải hiển thị danh sách người dùng đang online
+- Tự động cập nhật khi có người tham gia/rời khỏi
+
+## Cấu hình
+
+### Thay đổi port server
+Sửa trong `Server.java`:
+```java
+private static final int PORT = 8888; // Đổi port ở đây
+```
+
+### Thay đổi MongoDB URI
+Sửa trong `Server.java`:
+```java
+private static final String MONGODB_URI = "mongodb://localhost:27017";
+```
+
+### Thay đổi server host
+Sửa trong `Client.java`:
+```java
+private static final String SERVER_HOST = "localhost";
+```
+
+## Troubleshooting
+
+### Lỗi kết nối MongoDB
+- Đảm bảo MongoDB đang chạy
+- Kiểm tra URI MongoDB trong code
+- Kiểm tra firewall/antivirus
+
+### Lỗi kết nối Server
+- Đảm bảo Server đã khởi động
+- Kiểm tra port có bị chiếm không
+- Kiểm tra firewall
+
+### Lỗi build
+- Đảm bảo đã download dependencies: `ant download-deps`
+- Kiểm tra Java version: `java -version`
+- Kiểm tra Ant: `ant -version`
+
+## Tính năng nâng cao
+
+### Auto-reconnect
+Client tự động thử kết nối lại mỗi 5 giây khi mất kết nối.
+
+### Password Security
+Mật khẩu được hash bằng SHA-256 trước khi lưu vào MongoDB.
+
+### Unicode Support
+Hỗ trợ đầy đủ tiếng Việt và các ký tự Unicode.
+
+### Room Management
+- Tạo phòng chat riêng tư
+- Lưu lịch sử chat theo phòng
+- Chuyển phòng dễ dàng
+
+### Status Management
+- Theo dõi trạng thái online/offline
+- Lưu trạng thái trong MongoDB
+- Hiển thị thời gian hoạt động cuối
 
 
 ## Thông tin liên hệ  
