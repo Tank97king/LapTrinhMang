@@ -24,6 +24,7 @@
 **Server**: đóng vai trò trung tâm, quản lý kết nối và chuyển tiếp tin nhắn.  
 **Client**: cung cấp giao diện để gửi/nhận tin nhắn.  
 **Lưu trữ dữ liệu**: lịch sử chat được lưu vào file văn bản thay vì cơ sở dữ liệu, giúp triển khai đơn giản.  
+
 Các chức năng chính:  
 
 - ✅ Kết nối Client-Server qua Socket
