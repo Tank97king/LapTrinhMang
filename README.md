@@ -20,6 +20,7 @@
 
 </div>
 ## 📖 1. Giới thiệu hệ thống
+
 Ứng dụng chat Client-Server sử dụng giao thức TCP cho phép nhiều người dùng giao tiếp thời gian thực qua mạng.  
 **Server**: đóng vai trò trung tâm, quản lý kết nối và chuyển tiếp tin nhắn.  
 **Client**: cung cấp giao diện để gửi/nhận tin nhắn.  
