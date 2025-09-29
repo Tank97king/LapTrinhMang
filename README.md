@@ -110,7 +110,7 @@
 
 ## 📝 4. Hướng dẫn cài đặt và sử dụng
 
-### 🔧 Yêu cầu hệ thống
+
 
 ## Yêu cầu hệ thống
 
