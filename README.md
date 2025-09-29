@@ -1,4 +1,4 @@
-
+<img width="1829" height="713" alt="image" src="https://github.com/user-attachments/assets/0f334950-98ec-4fdf-bd79-21eb4024042a" />
 <h2 align="center">
     <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
     🎓 Faculty of Information Technology (DaiNam University)
@@ -9,9 +9,9 @@
 </h2>
 <div align="center">
     <p align="center">
-      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/aiotlab_logo.png?raw=true" alt="AIoTLab Logo" width="170"/>
-      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/fitdnu_logo.png?raw=true" alt="FITDNU Logo" width="180"/>
-      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/dnu_logo.png?raw=true" alt="DaiNam University Logo" width="200"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/aiotlab_logo.png?raw=true" alt="AIoTLab Logo" width="170"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/fitdnu_logo.png?raw=true" alt="FITDNU Logo" width="180"/>
+      <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/dnu_logo.png?raw=true" alt="DaiNam University Logo" width="200"/>
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
@@ -19,67 +19,45 @@
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
 </div>
+
+
+
 ## 📖 1. Giới thiệu hệ thống
 
-Ứng dụng chat Client-Server sử dụng giao thức TCP cho phép nhiều người dùng giao tiếp thời gian thực qua mạng.  
-**Server**: đóng vai trò trung tâm, quản lý kết nối và chuyển tiếp tin nhắn.  
-**Client**: cung cấp giao diện để gửi/nhận tin nhắn.  
-**Lưu trữ dữ liệu**: lịch sử chat được lưu vào file văn bản thay vì cơ sở dữ liệu, giúp triển khai đơn giản.  
+-Hệ thống ChatTCP bao gồm hai phần chính: Server và Client.
 
-Các chức năng chính:  
+- Server: Quản lý kết nối từ nhiều client, xử lý đăng ký/đăng nhập, lưu trữ tài khoản (sử dụng hashing SHA-256), quản lý nhóm chat, bạn bè, và lịch sử trò chuyện. Server sử dụng các file văn bản để lưu dữ liệu (accounts.txt, friends.txt, groups.txt, và thư mục history cho lịch sử chat).
 
-- ✅ Kết nối Client-Server qua Socket
-- ✅ Đăng ký/Đăng nhập với password hashing
-- ✅ Chat real-time với Unicode support
-- ✅ Quản lý phòng chat riêng tư
+- Client: Giao diện đồ họa sử dụng Swing, cho phép người dùng đăng ký, đăng nhập, xem danh sách người dùng trực tuyến, bạn bè, nhóm chat, gửi tin nhắn cá nhân/nhóm, gửi hình ảnh, và xem lịch sử chat. Client kết nối đến server qua socket TCP (mặc định port 5000).
+
+-Các chức năng chính:  
+
+- ✅ Đăng ký và đăng nhập
+- ✅ Chat cá nhân và nhóm.
+- ✅ Gửi file hình ảnh.
+- ✅ Quản lý bạn bè (gửi yêu cầu, chấp nhận/từ chối).
 - ✅ Hiển thị danh sách người dùng online
-- ✅ Lưu trữ lịch sử chat trong MongoDB
-- ✅ Quản lý trạng thái người dùng (online/offline/away)
-- ✅ Auto-reconnect khi mất kết nối
+- ✅ Tạo/tham gia/rời nhóm, thêm thành viên vào nhóm.
+- ✅ Lưu và tải lịch sử chat.
+- ✅ Giao diện thân thiện với emoji và tùy chỉnh UI.
 - ✅ GUI Swing hiện đại và dễ sử dụng
 
-**🖥️ Chức năng của Server**:  
-1. Kết nối & Quản lý Client: Lắng nghe các yêu cầu kết nối, tạo luồng riêng cho từng Client, quản lý danh sách Client đang hoạt động.  
-2. Trung gian phân phối tin nhắn:
-
-    Client gửi tin nhắn → Server nhận.
-    Server chuyển tiếp tin nhắn đến tất cả Client khác.
-    Các Client không giao tiếp trực tiếp mà thông qua Server.  
-    
-3. Quản lý lịch sử chat: Lưu tin nhắn (có timestamp) vào file văn bản.  
-4. Xóa lịch sử: Cung cấp chức năng xóa toàn bộ file lưu trữ khi cần.  
-5. Xử lý lỗi & đóng kết nối: Khi Client ngắt kết nối hoặc lỗi I/O, Server loại bỏ Client khỏi danh sách và tiếp tục phục vụ các Client khác.
-
-**💻 Chức năng của Client**:  
-1. Kết nối Server: Tạo socket đến Server theo IP + port.  
-2. Gửi tin nhắn: Người dùng nhập nội dung → Client gửi lên Server.  
-3. Nhận tin nhắn: Client lắng nghe phản hồi từ Server và hiển thị trong giao diện.  
-4. Giao diện người dùng (GUI): Cửa sổ chat có vùng hiển thị tin nhắn, ô nhập văn bản, nút gửi.  
-5. Quản lý trạng thái: Hiển thị thông báo khi mất kết nối, xử lý lỗi gửi/nhận.
-
-**🌐 Chức năng hệ thống**:  
-1. Giao thức TCP: Dùng ServerSocket và Socket, hỗ trợ nhiều Client đồng thời nhờ đa luồng.  
-2. Trung gian quản lý tin nhắn: Server giữ vai trò trung tâm, tất cả trao đổi giữa Client đều đi qua Server.  
-3. Lưu trữ dữ liệu: File I/O (append mode), ghi kèm thời gian (LocalDateTime).  
-4. Xử lý lỗi: Hiển thị lỗi trong GUI (Client), ghi log/debug ở Server.
 
 ## 🔧 2. Công nghệ sử dụng
-Các công nghệ được sử dụng để xây dựng ứng dụng chat Client-Server sử dụng TCP với Java Swing  
-**Java Core và Multithreading**  
-**Java Swing**  
-**Java Sockets**  
-**File I/O**  
-**MongoDB**  
-**Hỗ trợ**: 
 
-    java.util.Date hoặc java.time.LocalDateTime: Tạo timestamp cho mỗi tin nhắn để ghi vào file và hiển thị trên giao diện, giúp người dùng theo dõi thời gian gửi.
-    ArrayList: Quản lý danh sách các client đang kết nối trên server (lưu trữ PrintWriter hoặc DataOutputStream của từng client) để broadcast tin nhắn. Có thể mở rộng để lưu danh sách tên người dùng và trạng thái online/offline.
-Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và dễ triển khai trên mọi môi trường Java.
+- Ngôn ngữ lập trình: Java (JDK 8+).
+- Giao diện người dùng (Client): Swing (javax.swing) với tùy chỉnh Nimbus Look and Feel.
+- Mạng: Socket TCP (java.net.Socket và ServerSocket).
+- Xử lý dữ liệu: ObjectInputStream/ObjectOutputStream cho serialize/deserialize các đối tượng Message.
+- Bảo mật: Hashing mật khẩu bằng SHA-256 (java.security.MessageDigest).
+- Lưu trữ: File hệ thống (NIO - java.nio.file) cho tài khoản, bạn bè, nhóm, và lịch sử.
+- Thư viện bổ sung: ImageIO cho xử lý hình ảnh, DateTimeFormatter cho timestamp.
+- Cấu trúc: Các gói (packages) riêng biệt cho client (com.chattcp.client), server (com.chattcp.server), và shared (com.chattcp.shared cho Message, MessageType, UserInfo).
 
 ## 🚀 3. Hình ảnh các chức năng
 
 <p align="center">
-<img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20%C4%91%C4%83ng%20nh%E1%BA%ADp.png?raw=true" alt="Chức năng đăng nhập" width="700"/>
+<img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/%C4%90%C4%83ng%20nh%E1%BA%ADp.png?raw=true" alt="Chức năng đăng nhập" width="700"/>
 </p>
 
 <p align="center">
@@ -87,7 +65,7 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 </p>
 
 <p align="center">
-<img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20%C4%91%C4%83ng%20k%C3%BD.png?raw=true" alt="Chức năng đăng ký" width="700"/>
+<img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/%C4%90%C4%83ng%20K%C3%BD.png?raw=true" alt="Chức năng đăng ký" width="700"/>
 </p>
 <p align="center">
   <em> Hình 2: Chức năng đăng ký </em>
@@ -95,38 +73,38 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 
 
 <p align="center">
-  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/H%E1%BB%87%20th%E1%BB%91ng%20th%C3%B4ng%20bao%20tham%20gia%20th%C3%A0nh%20c%C3%B4ng.png?raw=true" alt="Hệ thống thông báo tham gia thành công" width="800"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/Giao%20di%E1%BB%87n.png?raw=true" alt="Hệ thống thông báo tham gia thành công" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 3: Hai Client chat với nhau.</em>
+  <em> Hình 3: Giao diện .</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Giao%20di%E1%BB%87n%202%20ng%C6%B0%E1%BB%9Di%20chat%20v%E1%BB%9Bi%20nhau.png?raw=true" alt="Giao diện hai người chat với nhau" width="800"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20N%C4%83ng%20Chat.png?raw=true" alt="Giao diện hai người chat với nhau" width="800"/>
 </p>
 <p align="center">
   <em> Hình 4: Giao diện hai người chat với nhau </em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/4%20Collection.png?raw=true" alt="Bộ sưu tập 4" width="800"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/ch%E1%BB%A9c%20n%C4%83ng%20g%E1%BB%ADi%20%E1%BA%A3nh.png?raw=true" alt="Bộ sưu tập 4" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 5: 4 Collection.</em>
-</p>
-
-<p align="center">
-  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tr%E1%BA%A1ng%20th%C3%A1i.png?raw=true" alt="Bộ sưu tập trạng thái" width="800"/>
-</p>
-<p align="center">
-  <em> Hình 6: Ảnh trạng thái </em>
+  <em> Hình 5: Chức năng gửi ảnh/file.</em>
 </p>
 
 <p align="center">
-    <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/X%C3%82Y%20D%E1%BB%B0NG%20%E1%BB%A8NG%20D%E1%BB%A4NG%20CHAT%20CLIENT-SERVER%20S%E1%BB%AC%20D%E1%BB%A4NG%20GIAO%20TH%E1%BB%A8C%20TCP/%E1%BA%A2nh/Collection%20tin%20nh%E1%BA%AFn.png?raw=true" alt="Bộ sưu tập tin nhắn" width="800"/>
+  <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20k%E1%BA%BFt%20b%E1%BA%A1n.png?raw=true" alt="Bộ sưu tập trạng thái" width="800"/>
 </p>
 <p align="center">
-  <em> Hình 7: Ảnh lưu tập tin nhắn</em>
+  <em> Hình 6: Chức năng kết bạn </em>
+</p>
+
+<p align="center">
+    <img src="https://github.com/Tank97king/LapTrinhMang/blob/main/CHAT%20TCP/%E1%BA%A2nh/Ch%E1%BB%A9c%20n%C4%83ng%20t%E1%BA%A1o%20nh%C3%B3m.png?raw=true" alt="Bộ sưu tập tin nhắn" width="800"/>
+</p>
+<p align="center">
+  <em> Hình 7: Chức năng tạo nhóm </em>
 </p>
 
 
@@ -136,154 +114,70 @@ Không sử dụng thư viện bên ngoài, đảm bảo ứng dụng nhẹ và 
 
 ## Yêu cầu hệ thống
 
-- Java 8 trở lên
-- MongoDB 4.0 trở lên
-- Ant (để build project)
+- JDK 8 hoặc cao hơn (đã cài đặt và cấu hình PATH).
+- Máy chủ (server) và máy khách (client) có thể chạy trên cùng máy hoặc mạng LAN.
 
 ## Cài đặt và chạy
 
-### 1. Cài đặt MongoDB
+Lưu ý: hướng dẫn dưới đây áp dụng cho Windows (PowerShell) và cho trường hợp bạn muốn chạy bằng file class đã compile trong thư mục `bin/` hoặc biên dịch từ `src/`.
 
-Tải và cài đặt MongoDB từ: https://www.mongodb.com/try/download/community
+1) Import vào Eclipse (tùy chọn)
+- File -> Import -> Existing Projects into Workspace -> chọn thư mục gốc dự án (folder chứa `src/`).
+- Khi import xong, chạy lớp `com.chattcp.server.ChatServer` trước, sau đó chạy `com.chattcp.client.ChatClient` cho từng client.
 
-Khởi động MongoDB:
-```bash
-mongod
+2) Chạy bằng dòng lệnh (PowerShell)
+
+- (Tùy chọn) Biên dịch từ `src/` sang `bin/`:
+
+```powershell
+# tạo thư mục bin nếu chưa có
+if (-not (Test-Path -Path .\bin)) { New-Item -ItemType Directory -Path .\bin }
+
+# biên dịch tất cả .java vào bin
+javac -d .\bin .\src\com\chattcp\shared\*.java .\src\com\chattcp\server\*.java .\src\com\chattcp\client\*.java
 ```
 
-### 2. Download dependencies
+- Chạy server (mặc định lắng nghe port 5000):
 
-```bash
-ant download-deps
+```powershell
+java -cp .\bin com.chattcp.server.ChatServer
 ```
 
-### 3. Build project
+- Chạy client (mỗi client một cửa sổ):
 
-```bash
-ant compile
+```powershell
+java -cp .\bin com.chattcp.client.ChatClient
 ```
 
-### 4. Chạy Server
+3) Tệp và thư mục quan trọng
+- `src/` — mã nguồn Java
+- `bin/` — chứa các .class đã biên dịch (nếu có)
+- `accounts.txt` — tệp danh sách tài khoản (đơn giản, username)
+- `history/` — chứa lịch sử chat (file text theo cuộc hội thoại)
 
-```bash
-ant run-server
-```
+4) Cấu hình / tham số
+- Port mặc định: 5000 (thay đổi trong `ChatServer` nếu muốn)
 
-### 5. Chạy Client
+5) Khắc phục sự cố nhanh
+- Nếu gặp lỗi ClassNotFound khi chạy: kiểm tra rằng `-cp` trỏ tới thư mục `bin` chứa cấu trúc package (ví dụ `bin\com\chattcp\...`).
+- Nếu cổng 5000 bị chiếm: sửa port trong `ChatServer.java` và recompile.
+- Nếu client không kết nối: đảm bảo firewall cho phép ứng dụng Java hoặc tắt tạm firewall để kiểm tra.
 
-Mở terminal mới và chạy:
-```bash
-ant run-client
-```
+## Gợi ý phát triển tiếp
 
-Hoặc chạy nhiều client để test:
-```bash
-ant run-client
-ant run-client
-ant run-client
-```
+- Lưu tài khoản kèm mật khẩu (băm) vào file hoặc SQLite
+- Chuyển đổi giao thức sang JSON để dễ mở rộng và an toàn hơn
+- Thêm TLS (SSL) cho kết nối để mã hóa dữ liệu
+- Thêm chat nhóm và danh sách bạn bè có persist
 
-## Cấu trúc project
+---
 
-```
-btl/
-├── src/btl/
-│   ├── Server.java          # Server chính với MongoDB integration
-│   └── Client.java          # Client với Swing GUI
-├── build.xml               # Ant build script
-├── lib/                    # Dependencies (MongoDB driver)
-└── README.md              # Hướng dẫn này
-```
-
-## Sử dụng
-
-### Đăng ký/Đăng nhập
-- Mở client, nhập tên đăng nhập và mật khẩu
-- Chọn "Đăng ký" để tạo tài khoản mới
-- Chọn "Đăng nhập" để đăng nhập với tài khoản có sẵn
-
-### Chat
-- Gõ tin nhắn và nhấn Enter hoặc nút "Gửi"
-- Tin nhắn sẽ được gửi đến tất cả người dùng trong phòng hiện tại
-- Lịch sử chat được tự động load khi vào phòng
-
-### Quản lý phòng
-- Sử dụng dropdown "Phòng" để chuyển phòng
-- Các lệnh chat:
-  - `/join <tên_phòng>` - Chuyển vào phòng
-  - `/create <tên_phòng>` - Tạo phòng mới
-  - `/rooms` - Xem danh sách phòng
-  - `/users` - Xem danh sách người dùng online
-  - `/status <trạng_thái>` - Đổi trạng thái
-
-### Danh sách người dùng
-- Panel bên phải hiển thị danh sách người dùng đang online
-- Tự động cập nhật khi có người tham gia/rời khỏi
-
-## Cấu hình
-
-### Thay đổi port server
-Sửa trong `Server.java`:
-```java
-private static final int PORT = 8888; // Đổi port ở đây
-```
-
-### Thay đổi MongoDB URI
-Sửa trong `Server.java`:
-```java
-private static final String MONGODB_URI = "mongodb://localhost:27017";
-```
-
-### Thay đổi server host
-Sửa trong `Client.java`:
-```java
-private static final String SERVER_HOST = "localhost";
-```
-
-## Troubleshooting
-
-### Lỗi kết nối MongoDB
-- Đảm bảo MongoDB đang chạy
-- Kiểm tra URI MongoDB trong code
-- Kiểm tra firewall/antivirus
-
-### Lỗi kết nối Server
-- Đảm bảo Server đã khởi động
-- Kiểm tra port có bị chiếm không
-- Kiểm tra firewall
-
-### Lỗi build
-- Đảm bảo đã download dependencies: `ant download-deps`
-- Kiểm tra Java version: `java -version`
-- Kiểm tra Ant: `ant -version`
-
-## Tính năng nâng cao
-
-### Auto-reconnect
-Client tự động thử kết nối lại mỗi 5 giây khi mất kết nối.
-
-### Password Security
-Mật khẩu được hash bằng SHA-256 trước khi lưu vào MongoDB.
-
-### Unicode Support
-Hỗ trợ đầy đủ tiếng Việt và các ký tự Unicode.
-
-### Room Management
-- Tạo phòng chat riêng tư
-- Lưu lịch sử chat theo phòng
-- Chuyển phòng dễ dàng
-
-### Status Management
-- Theo dõi trạng thái online/offline
-- Lưu trạng thái trong MongoDB
-- Hiển thị thời gian hoạt động cuối
 
 
 ## Thông tin liên hệ  
 Họ tên: Đinh Thế Thành.  
 Lớp: CNTT 16-01.  
 Email: dinhthethanh73@gmail.com.
-
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
